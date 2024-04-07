@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<ReclamosModel>
+<div class="card-header">
+    <h1>Consulta de Reclamos</h1>
+</div>
+<div class="card-body">
+    <table class="table table-bordered"> 
+        <thead>
+            <tr>
+                <th>Codigo Reclamo</th>
+                <th>Proveedor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model){
+                <tr>
+                    <td>@item.IdReclamo</td>
+                    <td>@item.NombreProveedor</td>
+                    <td><button class="btn btn-primary" asp-action="ClasificarReclamos" asp-controller="Empleado">Ver Detalle</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</<div>

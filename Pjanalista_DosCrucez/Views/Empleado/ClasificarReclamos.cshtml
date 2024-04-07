@@ -1,0 +1,88 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="card">
+    <div class="card-header">
+        <h1>Clasificar Reclamo</h1>
+    </div>
+    <div class="card-body">
+    <form>
+        <div class="row mb-3">
+        
+        </div>
+        <div class="row mb-3">
+            <h2>Datos Generales del Reclamo</h2>
+        </div>
+        <div class="row mb-3">
+            <label for="txtProveedor" class="col-sm-2 col-form-label">Proveedor</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtProveedor">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="txtDireccionProveedor" class="col-sm-2 col-form-label">Direccion</label>
+            <div class="col-sm-10">
+                <texarea class="form-control" id="txtDireccionProveedor"></texarea>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="txtDetalleReclamo" class="col-sm-2 col-form-label">Detalle del Reclamo</label>
+            <div class="col-sm-10">
+                <texarea class="form-control" id="txtDetalleReclamo"></texarea>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="txtTelefonoProveedor" class="col-sm-2 col-form-label">Proveedor</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtTelefonoProveedor">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="txtMontoReclado" class="col-sm-2 col-form-label">Monto Reclamado</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtMontoReclado">
+            </div>
+        </div>
+        <hr />
+        <div class="row mb-3">
+        <h2>Datos Generales del Consumidor</h2>
+        </div>
+        <div class="row mb-3">
+            <label for="NombreConsumidor" class="col-sm-2 col-form-label">Nombres</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtNombreConsumidor">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="ApellidoConsumidor" class="col-sm-2 col-form-label">Apellidos</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtApellidoConsumidor">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="EmailConsumidor" class="col-sm-2 col-form-label">Correo Electrónico</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="txtEmailConsumidor">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="duiConsumidor" class="col-sm-2 col-form-label">DUI</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtDuiConsumior">
+            </div>
+        </div>
+        
+        <div class="row mb-3">
+            <label for="EstadoReclamo" class="col-sm-2 col-form-label">Tipo de Atención</label>
+            <div class="col-sm-10">
+                <select class="form-select">
+                    <option value="1">One</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+    </div>
+</div>

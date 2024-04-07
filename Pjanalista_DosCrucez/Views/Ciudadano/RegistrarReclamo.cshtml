@@ -1,0 +1,98 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ReclamosModel 
+
+
+@{
+}
+<div class="card">
+    <div class="card-header">
+        <h1>Clasificar Reclamo</h1>
+    </div>
+    <div class="card-body">
+    <form asp-action = "RegistrarReclamo" asp-controller="Ciudadano" method="post">
+         <div class="row mb-3">
+            <h2>Datos Generales del Reclamo</h2>
+        </div>
+        <div class="row mb-3">
+            <label for="txtProveedor" class="col-sm-2 col-form-label">Proveedor</label>
+            <div class="col-sm-10">
+                <input asp-for = "NombreProveedor" type="text" class="form-control" id="txtProveedor">
+                <span asp-validation-for = "NombreProveedor" class ="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="txtDireccionProveedor" class="col-sm-2 col-form-label">Direccion</label>
+            <div class="col-sm-10">
+                    @Html.TextAreaFor(m => m.DireccionProveedor, 10, 40, new { @class = "form-control required"})
+                     <span asp-validation-for = "DireccionProveedor" class ="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="txtDetalleReclamo" class="col-sm-2 col-form-label">Detalle del Reclamo</label>
+            <div class="col-sm-10">
+                    @Html.TextAreaFor(m => m.DetalleReclamo, 10, 40, new { @class = "form-control required" })
+                    <span asp-validation-for = "DetalleReclamo" class ="text-danger"></span>
+                </div>
+        </div>
+        <div class="row mb-3">
+            <label for="txtTelefonoProveedor" class="col-sm-2 col-form-label">Teléfono</label>
+            <div class="col-sm-10">
+                <input asp-for = "TelefonoProveedor" type="text" class="form-control" id="txtTelefonoProveedor">
+                <span asp-validation-for = "TelefonoProveedor" class ="text-danger"></span>
+
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="txtMontoReclado" class="col-sm-2 col-form-label">Monto Reclamado</label>
+            <div class="col-sm-10">
+                    <input asp-for="MontoReclamo" type="text" class="form-control" id="txtMontoReclado">
+                    <span asp-validation-for = "MontoReclamo" class ="text-danger"></span>
+            </div>
+        </div>
+        <hr />
+        <div class="row mb-3">
+        <h2>Datos Generales del Consumidor</h2>
+        </div>
+        <div class="row mb-3">
+            <label for="NombreConsumidor" class="col-sm-2 col-form-label">Nombres</label>
+            <div class="col-sm-10">
+                <input asp-for = "NombreConsumidor" type="text" class="form-control" id="txtNombreConsumidor">
+                <span asp-validation-for = "NombreConsumidor" class ="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="ApellidoConsumidor" class="col-sm-2 col-form-label">Apellidos</label>
+            <div class="col-sm-10">
+                <input asp-for = "ApellidoConsumidor" type="text" class="form-control" id="txtApellidoConsumidor">
+                <span asp-validation-for = "ApellidoConsumidor" class ="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="EmailConsumidor" class="col-sm-2 col-form-label">Correo Electrónico</label>
+            <div class="col-sm-10">
+                <input asp-for = "EmailConsumidor" type="email" class="form-control" id="txtEmailConsumidor">
+                <span asp-validation-for = "EmailConsumidor" class ="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="EmailConsumidor" class="col-sm-2 col-form-label">Correo Electrónico</label>
+            <div class="col-sm-10">
+                <input asp-for = "DireccionConsumidor" type="email" class="form-control" id="txtEmailConsumidor">
+                <span asp-validation-for = "DireccionConsumidor" class ="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="duiConsumidor" class="col-sm-2 col-form-label">DUI</label>
+            <div class="col-sm-10">
+                <input asp-for = "DuiConsumidor" type="text" class="form-control" id="txtDuiConsumior" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" maxlenght = "10">
+                <span asp-validation-for = "DuiConsumidor" class ="text-danger"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+ 
+
+    </form>
+    </<div>
+ </div>
